@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Istd } from './shared/models/student';
+import { postsData } from './shared/consts/posts';
+import { Ipost } from './shared/models/posts';
 
 @Component({
   selector: 'app-root',
@@ -114,6 +116,8 @@ stdArr7: Array<Istd> = [
   { fname: 'Raj', lname: 'Patel', email: 'raj@gmail.com', contact: 9999999991, stdId: '701' },
   { fname: 'Kiran', lname: 'Joshi', email: 'kiran@gmail.com', contact: 9999999992, stdId: '702' }
 ];
+
+postsArr  : Array<Ipost>= postsData
 
 }
 
