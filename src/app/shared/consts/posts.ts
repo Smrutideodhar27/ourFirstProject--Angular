@@ -1,6 +1,6 @@
 import { Ipost } from "../models/posts";
 
-export let postsData: Array<Ipost> = [
+export let postData : Array<Ipost>= [
   {
     "userId": 1,
     "id": 1,
