@@ -1,6 +1,12 @@
 export interface Ipost {
-    userId: number;
-    id: number;
-    title: string;
-    body: string;
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  image: string;
+  rating: {
+    rate: number;
+    count: number;
+  };
 }

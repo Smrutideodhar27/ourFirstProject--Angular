@@ -1,339 +1,41 @@
-<!-- <h1 class="bg-primary p-4 text-white text-center">
-    {{title}}
-</h1> -->
-<!-- 
-<div class="container">
-   <div class="row">
-     <div class="col-md-4">
-        <div class="card">
-            <div class="card-header">
-                <h2>Title</h2>
-            </div>
-            <div class="card-body">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quaerat, ex quisquam repellat deleniti nihil ab voluptas libero quis. 
-                    Illo in eligendi ducimus obcaecati non iusto ipsam odit autem quibusdam.</p>
-            </div> -->
-            <!-- <div class="card-footer d-flex justify-content-between"> -->
-                <!-- <button mat-raised-button color="primary">Edit</button> -->
-                    <!-- <button mat-fab color="primary"> -->
-                         <!-- <mat-icon>delete</mat-icon> -->
-                    <!-- </button> -->
-                 <!-- <button mat-raised-button color="danger">Remove</button> -->
-             <!-- </div> -->
-        <!-- </div>
-    </div>
-   </div>
-    <hr>
-    <div class="row">
-        <div class="col-12">
 
-        <table class="table table-bordered mt-5"> -->
 
-                <!-- <thead>
-                    <tr>
-                         <th>Sr No</th>
-                        <th>first name</th>
-                        <th>last name</th>
-                        <th>email</th>
-                        <th>contact</th>
-                        <th>edit</th>
-                        <th>remove</th>
-                     </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let std of stdArr;let i = index">
-                        <td>{{i+1}}</td>
-                        <td>{{std.fname}}</td>
-                        <td>{{std.lname}}</td>
-                        <td>{{std.email}}</td>
-                        <td>{{std.contact}}</td> -->
-                        <!-- <td class="text-center">
-                            <button class="btn btn-sm btn-outline-primary">Edit</button>
-                            <button mat-mini-fab color="primary">
-                                <mat-icon>edit</mat-icon>
-                            </button>
-                        </td>
-                        <td class="text-center">
-                            <button class="btn btn-sm btn-outline-primary">Edit</button>
-                            <button mat-mini-fab color="warn">
-                                <mat-icon>delete</mat-icon>
-                            </button>
-                        </td> -->
-                    <!-- </tr>
-                </tbody>
-            </table>
-            <ul class="list-group">
-                <li *ngFor="let s of skills" class="list-group-item">
-                    I Love {{s}}
-                </li>
-            </ul>
+<div class="container py-5">
+  <div class="row">
 
-                    <tr>
-                        <th>Sr No</th>
-                        <th>first name</th>
-                        <th>last name</th>
-                        <th>email</th> -->
-                        <!-- <th>contact</th>
-                        <th>edit</th>
-                        <th>remove</th>
+    <div
+      class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
+      *ngFor="let post of postsArr">
 
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let std2 of stdArr2;let i = index ">
-                        <td>{{i+1}}</td>
-                        <td>{{std2.fname}}</td>
-                        <td>{{std2.lname}}</td>
-                        <td>{{std2.email}}</td>
-                        <td>{{std2.contact}}</td> -->
-                        <!-- <td class="text-center mt-4">
-                            <button mat-mini-fab color="primary">
-                                <mat-icon>edit</mat-icon>
-                            </button>
-                        </td>
-                        <td class="text-center mt-4 ">
-                            <button mat-mini-fab color="warn">
-                                <mat-icon>delete</mat-icon>
-                            </button>
-                        </td> -->
-                    <!-- </tr>
-                </tbody>
-            </table>
-            <ul class="list-group">
-                <li *ngFor="let sub of subjects" class="list-group-item">
-                    {{sub}}
-                </li>
-            </ul>
-            <ul class="list-group mt-4">
-                <li *ngFor="let C of cities" class="list-group-item">
-                    {{C}}
-                </li>
-            </ul> -->
-            <!-- <ul class="list-group mt-4">
-                <li *ngFor="let c of courses" class="list-group-item">
-                    {{c}}
-                </li>
-            </ul>
+      <div class="card product-card h-100">
+
+        <img
+          [src]="post.image"
+          class="card-img-top"
+          [alt]="post.title">
+
+        <div class="card-body d-flex flex-column">
+
+          <h6 class="card-title ellipsis-2">
+            {{ post.title}}...
+          </h6>
+
+          <p class="price">
+            ${{ post.price }}
+          </p>
+
+          <p class="rating">
+            ⭐ {{ post.rating.rate }} ({{ post.rating.count }})
+          </p>
+
+          <button class="btn btn-primary mt-auto">
+            View Details
+          </button>
+
         </div>
+      </div>
+
     </div>
-</div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <ul class="list-group mt-4">
-                <li *ngFor="let p of programmingLanguages" class="list-group-item">
-                    {{p}} -->
-                <!-- </li>
-            </ul>
-            <ul class="list-group mt-4">
-                <li *ngFor="let w of webConcepts" class="list-group-item">
-                    {{w}}
-                </li>
-            </ul>
-            <table class="table table-bordered mt-5">
-
-                <thead>
-                    <tr>
-                        <th>Sr No</th>
-                        <th>first name</th>
-                        <th>last name</th> -->
-                        <!-- <th>email</th>
-                        <th>contact</th>
-                        <th>stdId</th>
-                        <th>edit</th>
-                        <th>remove</th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                    <tr *ngFor="let Arr of stdArr3;let i = index">
-                        <td>{{i+1}}</td>
-                        <td>{{Arr.fname}}</td>
-                        <td>{{Arr.lname}}</td>
-                        <td>{{Arr.email}}</td>
-                        <td>{{Arr.contact}}</td>
-                        <td>{{Arr.stdId}}</td>
-                         <td> -->
-                            <!-- <button mat-mini-fab color="primary">
-                                <mat-icon>edit</mat-icon>
-                            </button>
-                        </td>
-                        <td>
-                            <button mat-mini-fab color="warn">
-                                <mat-icon>delete</mat-icon>
-                            </button>
-                        </td>  -->
-
-                    <!-- </tr>
-                </tbody>
-            </table>
-            <table class="table table-bordered mt-5">
-
-                <thead>
-                    <tr>
-                         <th>Sr No</th>
-                        <th>first name</th>
-                        <th>last name</th> -->
-                        <!-- <th>email</th>
-                        <th>contact</th>
-                        <th>edit</th>
-                        <th>remove</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let std4 of stdArr4;let i = index">
-                        <td>{{i+1}}</td>
-                        <td>{{std4.fname}}</td>
-                        <td>{{std4.lname}}</td>
-                        <td>{{std4.email}}</td>
-                        <td>{{std4.contact}}</td> -->
-                        <!-- <td>
-                            <button mat-mini-fab color="primary">
-                                <mat-icon>edit</mat-icon>
-                            </button>
-                        </td>
-                        <td>
-                            <button mat-mini-fab color="warn">
-                                <mat-icon>delete</mat-icon>
-                            </button>
-                        </td> -->
-
-                    <!-- </tr>
-                </tbody>
-            </table>
-             <table class="table table-bordered mt-5">
-
-                <thead>
-                    <tr>
-                         <th>Sr No</th>
-                        <th>first name</th> -->
-                        <!-- <th>last name</th>
-                        <th>email</th>
-                        <th>contact</th>
-                        <th>edit</th>
-                        <th>remove</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let std5 of stdArr5;let i = index">
-                        <td>{{i+1}}</td>
-                        <td>{{std5.fname}}</td>
-                        <td>{{std5.lname}}</td>
-                        <td>{{std5.email}}</td>
-                        <td>{{std5.contact}}</td> -->
-                        <!-- <td>
-                            <button mat-mini-fab color="primary">
-                                <mat-icon>edit</mat-icon>
-                            </button>
-                        </td>
-                        <td>
-                            <button mat-mini-fab color="warn">
-                                <mat-icon>delete</mat-icon>
-                            </button>
-                        </td> -->
-<!-- 
-                    </tr>
-                </tbody>
-            </table>
-            <table class="table table-bordered mt-5">
-
-                <thead>
-                    <tr>
-                         <td>Sr No</td> -->
-                        <!-- <td>first name</td>
-                        <td>last name</td>
-                        <td>email</td>
-                        <td>contact</td>
-                        <td>edit</td>
-                        <td>remove</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let std6 of stdArr6;let i = index">
-                        <td>{{i+1}}</td>
-                        <td>{{std6.fname}}</td>
-                        <td>{{std6.lname}}</td>
-                        <td>{{std6.email}}</td>
-                        <td>{{std6.contact}}</td>
-                         <td> -->
-                            <!-- <button mat-mini-fab color="primary">
-                                <mat-icon>edit</mat-icon>
-                            </button>
-                        </td>
-                        <td>
-                            <button mat-mini-fab color="warn">
-                                <mat-icon>delete</mat-icon>
-                            </button>
-                        </td> --> 
-                    <!-- </tr>
-                </tbody>
-            </table>
-            <table class="table table-bordered mt-5">
-                <thead>
-                    <tr>
-                        <td>Sr No</td>
-                        <td>first name</td> -->
-                        <!-- <td>last name</td>
-                        <td>email</td>
-                        <td>contact</td>
-                        <td>edit</td>
-                        <td>remove</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let std7 of stdArr7;let i = index">
-                        <td>{{i+1}}</td>
-                        <td>{{std7.fname}}</td>
-                        <td>{{std7.lname}}</td>
-                        <td>{{std7.email}}</td>
-                        <td>{{std7.contact}}</td> -->
-                        <!-- <td>
-                            <button mat-mini-fab color="primary">
-                                <mat-icon>edit</mat-icon>
-                            </button>
-                        </td>
-                        <td>
-                             <button mat-mini-fab color="warn">
-                                <mat-icon>delete</mat-icon>
-                            </button>
-                        </td> -->
-                    <!-- </tr>
-                </tbody>
-            </table>
-           
-        </div>
-    </div>
-</div> -->
-
-
-
-<!-- <h1>{{ title }}</h1> -->
-
-<div class="container">
-   <div class="row">
-     <div class="col-md-4 mb-4" *ngFor="let post of postsArr">
-        <div class="card h-100">
-            <div class="postCard card-header">
-                <h2 class="mb-0" 
-                data-toggle="tooltip" data-placement="top"
-                [title]="post.title">
-                    {{post.title}}
-                </h2>
-            </div>
-            <div class="card-body">
-                <p class="mb-0">
-                   {{post.body}}
-                </p>
-            </div>
-            <div class="card-footer d-flex justify-content-between">
-              <!-- <button class="btn btn-sm btn-outline-primary">Buy Now</button> -->
-               <button mat-raised-button color="primary">Buy Now</button>
-               <button mat-raised-button color="primary">Add to Cart</button>
-              <!-- <button class="btn btn-sm btn-outline-danger">Add to Card</button> -->
-
-             </div>
-        </div>
-    </div>
-   </div>
+  </div>
 </div>
