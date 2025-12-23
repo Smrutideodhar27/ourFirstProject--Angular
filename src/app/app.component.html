@@ -16,10 +16,18 @@
 
         <div class="card-body d-flex flex-column">
 
-          <h6 class="card-title ellipsis-2">
+          <h5 class="card-title ellipsis-2">
             {{ post.title}}...
-          </h6>
+            <!-- ({{post.description}}) -->
+          </h5>
+          <h6>
+            <p>
+              {{ post.description | slice:0:60 }}...
+            </p>
 
+
+          </h6>
+          
           <p class="price">
             ${{ post.price }}
           </p>
